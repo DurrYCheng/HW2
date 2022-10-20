@@ -7,7 +7,12 @@ int main(void)
 
 	printf("Enter investment (-1 to end) :");
 	scanf("%f", &inv);
-	
+	if (inv == -1)
+	{
+		system("pause");
+		return 0;
+	}
+
 	for (float y = 10; y <= 12; y=y + 0.5)
 	{
 		invo = inv;
@@ -15,7 +20,7 @@ int main(void)
 		{
 			
 			invo = invo * (1 + (y/100));
-			printf("%.2f\n", invo);
+			//printf("%.2f\n", invo);
 		}
 		printf("%.2f percent Compound-interest for 15 years : %.2f \n", y,invo);
 	}
